@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div id="app" class="card bg-danger text-white">
+    <div class="card bg-danger text-white">
         <div class="card-header">
             <div class="d-sm-flex align-items-center">
                 <h1>Pokedex</h1>
@@ -44,7 +44,7 @@
             var $search = $('#search');
 
             $search.keyup(function () {
-                let search = $search.val();
+                let search = $search.val().toLowerCase().replace(' ', '-');
 
                 $rows.each(function () {
                     let $row = $(this);
